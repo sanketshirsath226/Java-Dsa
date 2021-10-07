@@ -1,6 +1,4 @@
 //Q1 : Largest number
-package com.conditional_loops;
-
 import java.util.Scanner;
 
 public class Largest {
