@@ -11,5 +11,6 @@ public class AreaOfParallelogram {
         h = in.nextInt();
         area = b*h;
         System.out.println("Area: "+area);
+        in.close();
     }
 }
