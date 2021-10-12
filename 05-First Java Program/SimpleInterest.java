@@ -14,5 +14,6 @@ public class SimpleInterest {
         int r = input.nextInt();
         int si = p*t*r/100;
         System.out.print("Simple Interest:"+si);
+        input.close();
     }
 }
