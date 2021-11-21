@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "06-Conditional and Loops",
-        "07-Function or Methods"
+        "07-Function or Methods",
+        "08-Arrays and ArrayList"
     ]
 }

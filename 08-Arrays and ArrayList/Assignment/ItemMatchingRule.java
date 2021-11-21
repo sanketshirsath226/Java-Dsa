@@ -1,0 +1,80 @@
+/*
+You are given an array items, where each items[i] = [typei, colori, namei] describes the type, color, and name of the ith item. You are also given a rule represented by two strings, ruleKey and ruleValue.
+
+The ith item is said to match the rule if one of the following is true:
+
+ruleKey == "type" and ruleValue == typei.
+ruleKey == "color" and ruleValue == colori.
+ruleKey == "name" and ruleValue == namei.
+Return the number of items that match the given rule.
+
+ 
+
+Example 1:
+
+Input: items = [["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], ruleKey = "color", ruleValue = "silver"
+Output: 1
+Explanation: There is only one item matching the given rule, which is ["computer","silver","lenovo"].
+Example 2:
+
+Input: items = [["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]], ruleKey = "type", ruleValue = "phone"
+Output: 2
+Explanation: There are only two items matching the given rule, which are ["phone","blue","pixel"] and ["phone","gold","iphone"]. Note that the item ["computer","silver","phone"] does not match.
+ 
+
+Constraints:
+
+1 <= items.length <= 104
+1 <= typei.length, colori.length, namei.length, ruleValue.length <= 10
+ruleKey is equal to either "type", "color", or "name".
+All strings consist only of lowercase letters.
+*/
+package Assignment;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ItemMatchingRule {
+    public static void main(String[] args) {
+        List<List<String>> ls = new ArrayList<>(10);
+        Scanner in = new Scanner(System.in);
+        ls.add(new ArrayList<>());
+        for (int j = 0; j < 3; j++) {
+            ls.get(0).add(in.next());
+        }
+        System.out.println(countMatches(ls, "color", "silver"));
+    }
+
+    public static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+        int count = 0;
+        if (ruleKey.compareToIgnoreCase("type") == 0) {
+            for (List<String> str : items) {
+                if (str.get(0).compareToIgnoreCase(ruleValue) == 0) {
+                    count++;
+                }
+            }
+        } else if (ruleKey.compareToIgnoreCase("color") == 0) {
+            for (List<String> str : items) {
+                if (str.get(1).compareToIgnoreCase(ruleValue) == 0) {
+                    count++;
+                }
+
+            }
+        } else if (ruleKey.compareToIgnoreCase("name") == 0) {
+            for (List<String> str : items) {
+                if (str.get(2).compareToIgnoreCase(ruleValue) == 0) {
+                    count++;
+                }
+
+            }
+        }
+        return count;
+    }
+    /*
+     * int n=items.size(); int m=(items.get(0)).size(); int x=0; int y=0;
+     * if(ruleKey.equals("type")) x=0; if(ruleKey.equals("color")) x=1;
+     * if(ruleKey.equals("name")) x=2; for(int i=0;i<n;i++) { List<String>
+     * res=items.get(i); if(res.get(x).equals(ruleValue)) y++; } return y;
+     */
+}
