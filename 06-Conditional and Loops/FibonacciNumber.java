@@ -4,11 +4,9 @@ public class FibonacciNumber {
     public static void main(String[] args) {
         int no1,no2,n,count;
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter No1:");
-        no1 = in.nextInt();
-        System.out.print("Enter No2:");
-        no2 = in.nextInt();
         System.out.print("Enter N:");
+        no1 = 0;
+        no2 = 1;
         n = in.nextInt();
         count=2;
         while(count<=n)
@@ -19,5 +17,6 @@ public class FibonacciNumber {
             count++;
         }
         System.out.println(""+no2);
+        in.close();
     }
 }
