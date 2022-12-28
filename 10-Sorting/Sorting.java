@@ -1,10 +1,26 @@
 import java.util.Arrays;
 public class Sorting {
     public static void main(String[] args){
-        int[] arr = new int[]{1,4,3,2,0};
-        insertion(arr);
+        int[] arr = new int[]{5,4,3,2,1};
+        cyclic(arr);
         System.out.println(Arrays.toString(arr));
     }
+        /*
+        Max Element Index Position
+        parameters : int - 2-D Arr, int Start , int End
+        return : int index
+    */
+
+    public static int getMaxIndex(int[] arr,int start,int end){
+        int max = start;
+        for(int i=start;i<=end;i++){
+            if(arr[i] > arr[max]){
+                max = i;
+            }
+        }
+        return max;
+    }
+
     /*
      Swapping the two Element in Array
      parameters : int - 2-D Arr,int First,int Second
@@ -72,19 +88,22 @@ public class Sorting {
             }
         }
     }
-    /*
-        Max Element Index Position
-        parameters : int - 2-D Arr, int Start , int End
-        return : int index
-    */
 
-    public static int getMaxIndex(int[] arr,int start,int end){
-        int max = start;
-        for(int i=start;i<=end;i++){
-            if(arr[i] > arr[max]){
-                max = i;
+    /* 
+     Cyclic Sort
+     parameters : int - 2-D Arr
+     return : none
+    */
+    public static void cyclic(int[] arr){
+        int i= 0;
+        // i < arr.length because its requires only (n-1) passes
+        while(i<arr.length){
+            int correct = arr[i] - 1;
+            if(arr[i] !=arr[correct]){
+                swap(arr,i,correct);
+            }else{
+                i++;
             }
         }
-        return max;
     }
 }
