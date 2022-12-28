@@ -33,7 +33,6 @@ n == nums.length
 All the numbers of nums are unique.
 */
 class MissingNumber{
-<<<<<<< HEAD
     public static void main(String[] args){
         System.out.println(missingNumber(new int[]{4,3,1,0}));
     }
@@ -61,14 +60,4 @@ class MissingNumber{
         arr[first] = arr[second];
         arr[second] = temp;
     }
-=======
-    public static void main(){
-
-    }
-
-    public static int missingNumber(int[] nums) {
-        
-    }
-
->>>>>>> c9f3f5d09efb487cb3b1acf6be46aeb6dc7fd94f
 }

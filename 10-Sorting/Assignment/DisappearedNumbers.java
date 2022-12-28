@@ -34,7 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 class DisappearedNumbers{
     public static void main(String[] args){
-        System.out.println(Arrays.toString(findDisappearedNumbers(new int[]{5,1,2,2,1}).toArray()));
+        System.out.println(Arrays.toString(findDisappearedNumbers(new int[]{4,1,2,2,1}).toArray()));
     }
     public static List<Integer> findDisappearedNumbers(int[] nums) {
         int i=0;
