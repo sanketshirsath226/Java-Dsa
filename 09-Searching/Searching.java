@@ -10,13 +10,13 @@ class Searching{
             {33,34,38,50}
         }; 
         int[][] arr3 = new int[][]{
-            {1,2,3,4},
+            {0,2,3,4},
             {5,6,7,8},
             {9,10,11,12},
             {13,14,15,16}
         };
         int target = 0;
-        System.out.println("The target element "+target+" is at "+Arrays.toString(twoDimensionBSRC(arr3, target)));
+        System.out.println("The target element "+target+" is at "+Arrays.toString(twoDimensionBSSorted(arr3, target)));
     }
 
     /* SIMPLE BINARY SEARCH
@@ -144,9 +144,9 @@ class Searching{
                 return new int[]{row,mid};
             }
             if(matrix[mid][cMid] > target){
-                rEnd = cMid;
+                rEnd = mid;
             }else{
-                rStart = cMid;
+                rStart = mid;
             }
         }
         

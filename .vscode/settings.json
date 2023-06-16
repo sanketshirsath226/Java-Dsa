@@ -5,7 +5,9 @@
         "08-Arrays and ArrayList",
         "09-Searching",
         "09-Searching/Assignment",
-        "10-Sorting"
+        "10-Sorting",
+        "Rough",
+        "11-String&StringBuilder"
     ],
     "editor.parameterHints.enabled": false,
     "editor.suggestOnTriggerCharacters": false,
